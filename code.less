@@ -1,0 +1,1020 @@
+﻿//创建者:杨泉耀 版本:1.0 Bate 证书:MIT
+@danger: #ff0000;
+@primary: #337ab7;
+@success: #5cb85c;
+@info: #5bc0de;
+@warning: #f0ad4e;
+@invser: #363636;
+@oppo: #01a384;
+@oppo2: #009B72;
+@gray-darker: lighten(#000, 13.5%); // #222
+@gray-dark: lighten(#000, 20%); // #333
+@gray: lighten(#000, 33.5%); // #555
+@gray-light: lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+@brand-primary: darken(#428bca, 6.5%); // #337ab7
+@brand-success: #5cb85c;
+@brand-info: #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger: #d9534f;
+@hui: rgba(102,128,153,.05);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    //font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+.transform_(@type) {
+    transform: @type;
+    -webkit-transform: @type;
+    -moz-transform: @type;
+    -o-transform: @type;
+    -ms-transform: @type;
+}
+
+.shadow-noborder(@color,@size) {
+    -webkit-box-shadow: 0px 0px @size @color;
+    -moz-box-shadow: 0px 0px @size @color;
+    -o-box-shadow: 0px 0px @size @color;
+    -ms-box-shadow: 0px 0px @size @color;
+    box-shadow: 0px 0px @size @color;
+}
+
+.text-shadow(@color,@size) {
+    text-shadow: 0px 0px @size @color;
+}
+
+.shadow(@color,@size) {
+    border: 1px solid @color;
+    -webkit-box-shadow: 0px 0px @size @color;
+    -moz-box-shadow: 0px 0px @size @color;
+    -o-box-shadow: 0px 0px @size @color;
+    -ms-box-shadow: 0px 0px @size @color;
+    box-shadow: 0px 0px @size @color;
+}
+
+.transition_ (@type,@time) {
+    -webkit-transition: @type @time;
+    -moz-transition: @type @time;
+    -o-transition: @type @time;
+    transition: @type @time;
+}
+
+.transform-origin(@arg1,@arg2) {
+    transform-origin: @arg1 @arg2;
+    -webkit-transform-origin: @arg1 @arg2;
+    -moz-transform-origin: @arg1 @arg2;
+    -ms-transform-origin: @arg1 @arg2;
+    -o-transform-origin: @arg1 @arg2;
+}
+
+.border-r(@tl,@tr,@bl,@br) {
+}
+
+
+.pre {
+
+    font-family:inherit;
+    font-size:14px;
+    font-weight:100;
+    background-color:#2E3132;
+    table {
+        background-color: transparent;
+        transform-origin: left top;
+        -webkit-transform-origin: left top;
+        -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+        -o-transform-origin: left top;
+        //overflow:hidden;
+        width: auto;
+        border-spacing: 0;
+        border-collapse: collapse;
+        line-height:18px!important;
+    }
+
+    caption {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: #777;
+        text-align: left;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid #ddd;
+        }
+
+        .table > thead > tr > th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .table > caption + thead > tr:first-child > td, .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table > thead:first-child > tr:first-child > th {
+            border-top: 0;
+        }
+
+        .table > tbody + tbody {
+            border-top: 2px solid #ddd;
+        }
+
+        .table .table {
+            background-color: #fff;
+        }
+
+    .table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+        padding: 5px;
+    }
+
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    padding: 0;
+    overflow: auto;
+
+    code {
+        color: #82AEB6;
+        white-space: pre;
+        //background-color:#2E3132;
+    }
+    .Comments{
+        font-style: italic;
+    }
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: #0295DD;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+            font-family:Menlo, Monaco, Consolas, 'Courier New', monospace;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            font-family:Menlo, Monaco, Consolas, 'Courier New', monospace;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+                font-family:Menlo, Monaco, Consolas, 'Courier New', monospace;
+            }
+        }
+    }
+}
+
+.CSharp-Code {
+    code {
+        white-space: pre;
+        font-family: inherit;
+    }
+
+
+
+    .KeyWord {
+        color: #337ab7;
+        font-family: inherit;
+    }
+
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    color: #fafafa;
+    padding: 0;
+    overflow: auto;
+
+    .Class {
+        color: #428bca;
+        font-family: inherit;
+    }
+
+    .Comments {
+        color: green;
+        color: #4AA657;
+        font-family: inherit;
+
+        .KeyWord {
+            color: #4AA657;
+        }
+
+        .Operate {
+            color: #4AA657;
+        }
+
+        .String {
+            color:#4aa657;
+        }
+    }
+
+    .String {
+        color: red;
+        font-family: inherit;
+
+        .KeyWord {
+            color: red;
+        }
+
+        .Comments {
+            color: red;
+        }
+
+        .Operate {
+            color: red;
+        }
+    }
+
+
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: @info;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Over {
+        color: #b14921;
+    }
+
+    .Operate {
+        color: @oppo;
+    }
+}
+
+.CPlusPlus-Code {
+    code {
+        white-space: pre;
+        font-family: inherit;
+    }
+
+
+
+    .KeyWord {
+        color: #337ab7;
+        font-family: inherit;
+    }
+
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    color: #fafafa;
+    padding: 0;
+    overflow: auto;
+
+    .Class {
+        color: #428bca;
+        font-family: inherit;
+    }
+
+    .Comments {
+        color: #4AA657;
+        font-family: inherit;
+
+        .KeyWord {
+            color: #4AA657;
+        }
+
+        .Operate {
+            color: #4AA657;
+        }
+
+        .String {
+        color: #4AA657;
+        }
+    }
+
+    .String {
+        color: red;
+        font-family: inherit;
+
+        .KeyWord {
+            color: red;
+        }
+
+        .Comments {
+            color: red;
+        }
+
+        .Operate {
+            color: red;
+        }
+    }
+
+
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: @info;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: @info;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Over {
+        color: #b14921;
+    }
+
+    .Operate {
+        font-family: inherit;
+        color: @oppo;
+    }
+}
+
+.Java-Code {
+    code {
+        white-space: pre;
+        font-family: inherit;
+    }
+
+
+
+    .KeyWord {
+        font-family: inherit;
+        color: #337ab7;
+    }
+
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    color: #fafafa;
+    padding: 0;
+    overflow: auto;
+
+    .Class {
+        color: #428bca;
+        font-family: inherit;
+    }
+
+    .Comments {
+        color: #4AA657;
+        font-family: inherit;
+
+        .KeyWord {
+            color: #4AA657;
+        }
+
+        .Operate {
+            color: #4AA657;
+        }
+
+        .String {
+            color: #4AA657;
+
+            .KeyWord {
+             color: #4AA657;
+            }
+        }
+    }
+
+    .String {
+        color: red;
+        font-family: inherit;
+
+        .KeyWord {
+            color: red;
+        }
+
+        .Comments {
+            color: red;
+        }
+
+        .Operate {
+            color: red;
+        }
+    }
+
+
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: @info;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Over {
+        color: #b14921;
+    }
+
+    .Operate {
+        font-family: inherit;
+        color: @oppo;
+    }
+}
+
+.JavaScript-Code {
+    code {
+        white-space: pre;
+        font-family:inherit;
+    }
+
+   
+    .KeyWord {
+        font-family:inherit;
+        color: #337ab7;
+    }
+
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    color: #fafafa;
+    padding: 0;
+    overflow: auto;
+
+    .Class {
+        color: #428bca;
+        font-family:inherit;
+    }
+
+    .Comments {
+        color: green;
+        color: #4AA657;
+        font-family:inherit;
+
+        .KeyWord {
+            color: #4AA657;
+        }
+
+        .Operate {
+            color: #4AA657;
+        }
+        .String{
+            color: #4AA657;
+        }
+    }
+
+    .String {
+        color: red;
+        font-family:inherit;
+        .KeyWord {
+            color: red;
+        }
+
+        .Comments {
+            color: red;
+        }
+
+        .Operate {
+            color: red;
+        }
+    }
+
+
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: @info;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Over {
+        color: #b14921;
+    }
+
+    .Operate {
+        font-family:inherit;
+        color: @oppo;
+    }
+}
+
+.HTML-Code {
+
+
+
+
+    .KeyWord {
+        color: #ef0000;
+        font-family: inherit;
+    }
+
+
+
+
+    .Comments {
+        color: #ccc;
+        font-family: inherit;
+
+        .String {
+            color: #ccc;
+        }
+
+        .KeyWord {
+            color: #ccc;
+        }
+
+        .Tag {
+        color: #ccc;
+        }
+    }
+
+    .String {
+        color: @warning;
+        font-family: inherit;
+
+        .KeyWord {
+            color: @warning;
+        }
+
+        .Comments {
+            color: @warning;
+        }
+    }
+
+
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: #0295DD;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Tag {
+        font-family: inherit;
+        color: @oppo2;
+    }
+}
+
+.PHP-Code {
+    code {
+        white-space: pre;
+        font-family: inherit;
+    }
+
+
+    .KeyWord {
+        color: #337ab7;
+        font-family: inherit;
+    }
+
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    color: #fafafa;
+    padding: 0;
+    overflow: auto;
+
+    .Class {
+        color: #428bca;
+        font-family: inherit;
+    }
+
+    .Comments {
+        color: green;
+        color: #4AA657;
+        font-family: inherit;
+
+        .KeyWord {
+            color: #4AA657;
+        }
+
+        .Operate {
+            color: #4AA657;
+        }
+
+        .Var {
+            color: #4AA657;
+        }
+
+        .String {
+        color: #4AA657;
+        }
+    }
+
+    .String {
+        color: red;
+        font-family: inherit;
+
+        .KeyWord {
+            color: red;
+        }
+
+        .Comments {
+            color: red;
+        }
+
+        .Operate {
+            color: red;
+        }
+
+        .Var {
+            color: red;
+        }
+    }
+
+    .Var {
+        color: @warning;
+    }
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: @info;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Over {
+        color: #b14921;
+    }
+
+    .Operate {
+        font-family: inherit;
+        color: @oppo;
+    }
+}
+
+.CSS-Code {
+
+
+
+
+    .KeyWord {
+        color: @warning;
+        font-family:inherit;
+    }
+
+
+
+
+    .Comments {
+        font-family:inherit;
+        color: @info;
+
+        .Tag {
+            color: @info;
+        }
+
+        .Value {
+            color: @info;
+        }
+    }
+
+    .String {
+        font-family:inherit;
+        color: @warning;
+
+        .KeyWord {
+            color: @warning;
+        }
+
+        .Comments {
+            color: @warning;
+        }
+    }
+
+    .Value {
+        font-family:inherit;
+        color: @primary;
+    }
+
+    .Line {
+
+
+        .LineNumber {
+            // display: inline-block;
+            min-width: 32px;
+            text-align: right;
+            border-right: 2px solid #01a384;
+            //position: absolute;
+            background-color: #363636;
+            color: #0295DD;
+            vertical-align: top;
+            white-space: pre;
+            padding-left: 8px;
+        }
+
+        .Line-Body {
+            //display: inline-block;
+            height: auto;
+            margin-left: 42px;
+            //white-space:nowrap;
+            color: #82AEB6;
+
+            .Pcode {
+                white-space: pre;
+            }
+        }
+    }
+
+    .Tag {
+        font-family:inherit;
+        color: @oppo2;
+    }
+}
+
+.CodeToolBar {
+    position: relative;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+    width: 100%;
+    float: left;
+    background: #565656;
+
+    .toolitem {
+        &:first-child {
+            margin-left:32px;
+        }
+
+        float: left;
+        padding: 0 4px;
+        font-family: inherit;
+
+        a {
+            color: #fafafa;
+            text-decoration: none;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.move {
+    cursor:move;
+}
+.Messagebox {
+    position: fixed;
+    width: 88%;
+    height: 72%;
+    left: 6%;
+    top: 14%;
+    z-index: 3000;
+    background-color: white;
+    border-radius: 4px;
+    .shadow(@hui,10px);
+    background-color:whitesmoke;
+
+    .button-close {
+        color: #666;
+        background-color: #EEE;
+        border-color: #EEE;
+        font-weight: 300;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 4px;
+        //line-height: 40px;
+        //height: 40px;
+        padding: 8px 20px;
+        margin: 0;
+        display: inline-block;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        float: right;
+        font-weight:400;
+
+        &:hover {
+            background-color: #f6f6f6;
+            text-decoration: none;
+            outline: none;
+        }
+    }
+
+    .box-head {
+        padding: 4px 12px;
+        border-bottom: 1px solid #ccc;
+        background-color:whitesmoke;
+        color: #333;
+        .Title {
+            color: @brand-info;
+        }
+    }
+
+    .box-body {
+        height: 100%-11%;
+        textarea {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            //background-color:#363636;
+            color:@gray;
+        }
+    }
+
+    .box-footer {
+        padding: 4px 12px;
+        
+       
+    }
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f5f5f5;
+    border-left: 1px solid #d2d2d2;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c2c2c2;
+    background-clip: padding-box;
+    border: 1px solid #979797;
+    min-height: 28px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        border: 1px solid #636363;
+        background-color: #929292;
+    }
+.code-white{
+
+    background-color: whitesmoke!important;
+    border-color: whitesmoke!important;
+    margin-bottom: 20px!important;
+    .CodeToolBar{
+        display: none;
+    }
+
+
+    .LineNumber{
+        background-color: whitesmoke!important;;
+    }
+    table{
+      line-height: 18px!important;
+        margin: 1px 0;
+    }
+}
